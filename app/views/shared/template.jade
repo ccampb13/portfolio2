@@ -5,21 +5,25 @@ html
     title= title
     link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/buttons.css', rel='stylesheet')
+    link(href='http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css', rel='stylesheet')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
     link(href='/less/app.css', rel='stylesheet')
   body
-    nav
-      ul
-        li: a(href='/') Home
-        li: a(href='/about') About
-        li: a(href='/faq') Faq
-        li: a(href='/contact') Contact
-        li: a(href='/resume') Resume
-        li: a(href='/login') Login
-        li: a(href='/projects') Projects
-        if(user)
-          li: a(href='/logout')= user.email
-          li: a(href='/projects/new') New Project
-          li: a(href='/projects/sort') Sort Projects
+    .nav
+      .container
+        ul.pull-left
+          li: a(href='/') Home
+        ul.pull-right
+          li: a(href='/about') About
+          //- li: a(href='/faq') Faq
+          li: a(href='/contact') Contact
+          //- li: a(href='/resume') Resume
+          li: a(href='/projects') Projects
+          if(user)
+            li: a(href='/login') Login
+            li: a(href='/logout')= user.email
+            li: a(href='/projects/new') New Project
+            li: a(href='/projects/sort') Sort Projects
 
     block content
 
@@ -30,6 +34,7 @@ html
     script(src='/js/vendor/traceur.js')
     script(src='/socket.io/socket.io.js')
     script(src='/js/es5/main.js')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
     script(src='/js/es6/compiled/main.js')
     script(src='/js/es6/compiled/sockets.js')
 

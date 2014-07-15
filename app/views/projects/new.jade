@@ -1,9 +1,9 @@
 extends ../shared/template
 
 block content
-  h1 New Project
+  h1#newProject New Project
 
-  form(action='/projects', method='post', enctype='multipart/form-data')
+  form#newProject(action='/projects', method='post', enctype='multipart/form-data')
     input(type='text', name='title', placeholder='Title')
     textarea(name='description', placeholder='Description')
     input(type='text', name='tags', placeholder='Tags')
@@ -11,4 +11,4 @@ block content
     input(type='text', name='app', placeholder='App Url')
     input(type='date', name='date')
     input(type='file', name='photos', multiple=true)
-    button Add Project
+    button#newProject Add Project

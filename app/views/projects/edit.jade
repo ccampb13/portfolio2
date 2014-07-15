@@ -3,7 +3,7 @@ extends ../shared/template
 block content
   h1 Edit Project
 
-  form(action='/projects/#{project._id}', method='post')
+  form#editProject(action='/projects/#{project._id}', method='post')
     input(type='hidden', name='_method', value='put')
     input(type='text', name='title', placeholder='Title', value='#{project.title}')
     textarea(name='description', placeholder='Description')= project.description

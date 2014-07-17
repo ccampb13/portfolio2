@@ -11,19 +11,20 @@ html
   body
     .nav
       .container
-        ul.pull-left
-          li: a(href='/') Home
-        ul.pull-right
-          li: a(href='/about') About
-          //- li: a(href='/faq') Faq
-          li: a(href='/contact') Contact
-          //- li: a(href='/resume') Resume
-          li: a(href='/projects') Projects
-          if(user)
-            li: a(href='/login') Login
-            li: a(href='/logout')= user.email
-            li: a(href='/projects/new') New Project
-            li: a(href='/projects/sort') Sort Projects
+        .row
+          ul.pull-left
+            li: a(href='/') Home
+          ul.pull-right
+            li: a(href='/about') About
+            //- li: a(href='/faq') Faq
+            li: a(href='/contact') Contact
+            //- li: a(href='/resume') Resume
+            li: a(href='/projects') Projects
+            if(user)
+              li: a(href='/login') Login
+              li: a(href='/logout')= user.email
+              li: a(href='/projects/new') New Project
+              li: a(href='/projects/sort') Sort Projects
 
     block content
 

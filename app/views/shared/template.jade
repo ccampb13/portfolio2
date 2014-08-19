@@ -5,28 +5,50 @@ html
     title= title
     link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/buttons.css', rel='stylesheet')
-    link(href='http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css', rel='stylesheet')
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
     link(href='/less/app.css', rel='stylesheet')
   body
+   .container
     .nav
-      .container
-        .row
-          ul.pull-left
-            li: a(href='/') Home
-          ul.pull-right
-            li: a(href='/about') About
-            //- li: a(href='/faq') Faq
-            li: a(href='/contact') Contact
-            //- li: a(href='/resume') Resume
-            li: a(href='/projects') Projects
-            if(user)
-              li: a(href='/login') Login
-              li: a(href='/logout')= user.email
-              li: a(href='/projects/new') New Project
-              li: a(href='/projects/sort') Sort Projects
+      .row
+        .col-lg-3
+          a(href='/')
+            li: Still Chad Campbell
+        .col-lg-5
+          a(href='/projects')
+            li:  some Projects
+            | >
+          a(href='/about')
+            li:  little About
+            | >
+          a(href='/contact')
+            li:  please Contact
+            | >
+        .col-lg-4
+          a(href='/projects/new')
+            li: do Web Design & Development
 
-    block content
+          //- if(user)
+          //-   li: a(href='/login') Login
+          //-   li: a(href='/logout')= user.email
+          //-   li: a(href='/projects/new') New Project
+          //-   li: a(href='/projects/sort') Sort Projects
+
+
+    header
+      .row
+        block content
+
+    footer
+      .row
+        .col-lg-2
+        .col-lg-8.col.md-4
+          ul.footer
+            li Peak Nine Designs
+            li Sylvan Park Nashville, TN
+            li ccampb13@gmail.com
+            li @_chad_campbell
+        .col-lg-2
 
     script(src='/js/vendor/jquery-2.1.1.js')
     script(src='/js/vendor/lodash-2.4.1.js')

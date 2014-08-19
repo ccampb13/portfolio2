@@ -1,7 +1,12 @@
 'use strict';
 
+var traceur = require('traceur');
+var Project = traceur.require(__dirname + '/../models/project.js');
+
 exports.index = (req, res)=>{
-  res.render('home/index', {title: 'Portfolio: Home'});
+  Project.findAll(projects=>{
+    res.render('home/index', {projects:projects, title: 'Portfolio: Home'});
+  });
 };
 
 exports.about = (req, res)=>{

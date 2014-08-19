@@ -8,7 +8,7 @@ class User{
   static login(obj, fn){
     users.findOne({email:obj.email}, (e,u)=>{
       if(u){
-        console.log('-----model user---------------')
+        console.log('-----model user---------------');
         console.log(u);
         var isMatch = bcrypt.compareSync(obj.password, u.password);
         if(isMatch){

@@ -11,22 +11,22 @@ html
    .container
     .nav
       .row
-        .col-lg-3
+        .col-lg-3.col-sm-12
           a(href='/')
             li: Still Chad Campbell
-        .col-lg-5
+        .col-lg-5.col-sm-12
           a(href='/projects')
-            li:  some Projects
+            li.simple:  some Projects
             | >
           a(href='/about')
-            li:  little About
+            li.simple:  little About
             | >
           a(href='/contact')
-            li:  please Contact
+            li.simple:  please Contact
             | >
-        .col-lg-4
+        .col-lg-4.col-sm-12
           a(href='/projects/new')
-            li: do Web Design & Development
+            li.normal: do Web Design & Development
 
           //- if(user)
           //-   li: a(href='/login') Login
@@ -41,13 +41,13 @@ html
 
     footer
       .row
-        .col-lg-2
-        .col-lg-8.col.md-4
+        .col-lg-2.col-md-4.col-md-1
+        .col-lg-8.col-md-4.col-md-1
           ul.footer
-            li Peak Nine Designs
-            li Sylvan Park Nashville, TN
-            li ccampb13@gmail.com
-            li @_chad_campbell
+            li &#169; Peak Nine Designs
+            li.normal Sylvan Park Nashville, TN
+            li.simple ccampb13@gmail.com
+            li.simple @_chad_campbell
         .col-lg-2
 
     script(src='/js/vendor/jquery-2.1.1.js')

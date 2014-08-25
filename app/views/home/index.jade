@@ -4,11 +4,9 @@ block content
   h1 Hi,
   br
   h1.normal I'm Chad, a web designer and developer located in Nashville, TN. I write code and serve pizza on Sundays.
-  a(href='#')
+  a(href='/about')
     p.simple More about what I do >
-  h2 Work
+  h2.work.simple Recent Work
   each project in projects
       ul.index-home-projects
         li: a(href='/projects/#{project._id}')= project.title
-  a(href='#')
-    p.simple More about what I do >

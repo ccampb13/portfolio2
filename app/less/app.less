@@ -1,9 +1,27 @@
 * {
   border: 12px;
   padding: 10px;
+  font-weight: bold;
+  color: #D5F1F0;
   box-sizing: border-box;
 }
 
+html {
+  background-color: #D5F1F0;
+}
+
+body {
+  background-color: #494E50;
+  font: 100%;
+}
+
+.row {
+  text-align: center;
+}
+
+
+
+//////ignore for now////////
 .photo{
   display: inline-block;
   background-size: cover;
@@ -11,37 +29,39 @@
   height: 200px;
 }
 
+
+
 .primary{
   border: 3px solid red;
 }
+////////////////////////////////
 
-.nav li {
-  display: inline;
-  text-align: center;
+a.main {
+  font-weight: bold;
+  color: #D5F1F0;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 a {
+  font-weight: normal;
   color: white;
   a:hover: none;
 }
 
-* {
-   font-weight: bold;
-   color: #D5F1F0;
- }
+a.link {
+  color: white;
+  display: inline;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
 
- html {
-   background-color: #D5F1F0;
- }
-
- body {
-   background-color: #494E50;
-   font: 100%;
- }
-
- .project {
-   display: inline;
- }
+//////projects///////
+.project {
+ display: inline;
+}
 
  ul.index-home-projects {
    &, li {
@@ -59,32 +79,46 @@ p {
 
 h1.normal {
   display: inline;
+  padding: 0px;
+  text-align: left;
 }
 
-// a p {
-//   display: inline;
-// }
+h1.hi {
+  padding-left: 0px;
+}
+
+a p {
+  display: inline;
+  padding: 0px;
+}
 
 h2.work {
   font-size: 13px;
+  padding-left: 0px;
 }
 
 
- ul.footer li {
-   display: inline;
- }
-
- footer h1{
-   text-align: center;
- }
-
- .simple {
+.simple {
    font-weight: normal;
    color: #FFFFFF;
  }
 
  .normal  {
    font-weight: normal;
+ }
+
+ footer p {
+   padding-top: 10px;
+   display: inline;
+ }
+
+ img.about {
+   clear: both;
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   padding: 0px;
+   box-shadow: 1px 1px 2px 2px #D5F1F0;
  }
 
 

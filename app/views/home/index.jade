@@ -1,12 +1,13 @@
 extends ../shared/template
 
 block content
-  h1 Hi,
+  h1.hi Hi,
   br
   h1.normal I'm Chad, a web designer and developer located in Nashville, TN. I write code and serve pizza on Sundays.
   a(href='/about')
     p.simple More about what I do >
-  h2.work.simple Recent Work
-  each project in projects
+  .row
+    h2.work.simple Recent Work
+    each project in projects
       ul.index-home-projects
         li: a(href='/projects/#{project._id}')= project.title

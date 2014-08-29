@@ -11,22 +11,14 @@ html
    .container
     .nav
       .row
-        .col-lg-3.col-sm-12
-          a(href='/')
-            li: Still Chad Campbell
-        .col-lg-5.col-sm-12
-          a(href='/projects')
-            li.simple:  some Projects
-            | >
-          a(href='/about')
-            li.simple:  little About
-            | >
-          a(href='/contact')
-            li.simple:  please Contact
-            | >
-        .col-lg-4.col-sm-12
-          a(href='/projects/new')
-            li.normal: do Web Design & Development
+        .col-lg-4.col-md-12.col-sm-12
+          a.main(href='/') Chad Campbell
+        .col-lg-4.col-md-6.col-sm-12
+          a.link.projects(href='/projects') Projects
+          a.link(href='/about') About
+          a.link(href='/contact') Contact
+        .col-lg-4.col-md-6.col-sm-12
+          a.main(href='/projects/new') Web Design & Development
 
           //- if(user)
           //-   li: a(href='/login') Login
@@ -41,14 +33,18 @@ html
 
     footer
       .row
-        .col-lg-2.col-md-4.col-md-1
-        .col-lg-8.col-md-4.col-md-1
-          ul.footer
-            li &#169; Peak Nine Designs
-            li.normal Sylvan Park Nashville, TN
-            li.simple ccampb13@gmail.com
-            li.simple @_chad_campbell
-        .col-lg-2
+        .col-lg-4.col-md-12.col-sm-12
+          p &#169; Peak Nine Designs
+          p.normal Nashville, TN
+        .col-lg-4.col-md-12.col-sm-12
+          a(href='/contact')
+            img.about(src='/../img/pinewood photo.jpeg')
+        .col-lg-4.col-md-12.col-sm-12
+          p.simple ccampb13@gmail.com
+          p.simple @_chad_campbell
+
+
+
 
     script(src='/js/vendor/jquery-2.1.1.js')
     script(src='/js/vendor/lodash-2.4.1.js')
@@ -58,6 +54,7 @@ html
     script(src='/socket.io/socket.io.js')
     script(src='/js/es5/main.js')
     script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='/js/es6/compiled/projects.js')
     script(src='/js/es6/compiled/main.js')
     script(src='/js/es6/compiled/sockets.js')
 

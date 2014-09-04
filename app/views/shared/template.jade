@@ -2,6 +2,7 @@ doctype html
 html
   head
     meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, user-scalable=no')
     title= title
     link(href='/css/normalize.css', rel='stylesheet')
     link(href='/css/buttons.css', rel='stylesheet')
@@ -18,14 +19,7 @@ html
           a.link(href='/about') About
           a.link(href='/contact') Contact
         .col-lg-4.col-md-6.col-sm-12
-          a.main(href='/projects/new') Web Design & Development
-
-          //- if(user)
-          //-   li: a(href='/login') Login
-          //-   li: a(href='/logout')= user.email
-          //-   li: a(href='/projects/new') New Project
-          //-   li: a(href='/projects/sort') Sort Projects
-
+          p.web(href='/projects/new') Web Design & Development
 
     header
       .row
@@ -33,17 +27,17 @@ html
 
     footer
       .row
-        .col-lg-4.col-md-12.col-sm-12
+        .col-lg-2.col-md-12.col-sm-12
           p &#169; Peak Nine Designs
+        .col-lg-2.col-md-12.col-sm-12
           p.normal Nashville, TN
         .col-lg-4.col-md-12.col-sm-12
           a(href='/contact')
             img.about(src='/../img/pinewood photo.jpeg')
-        .col-lg-4.col-md-12.col-sm-12
+        .col-lg-2.col-md-12.col-sm-12
           p.simple ccampb13@gmail.com
+        .col-lg-2.col-md-12.col-sm-12
           p.simple @_chad_campbell
-
-
 
 
     script(src='/js/vendor/jquery-2.1.1.js')

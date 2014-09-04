@@ -4,7 +4,20 @@
   font-weight: bold;
   color: #D5F1F0;
   box-sizing: border-box;
+  font-size: 100%;
 }
+
+img.linkedin {
+  background-color: #D5F1F0;
+  padding: 0px;
+}
+
+
+
+img.icon {
+  background-color: #494E50;
+}
+
 
 html {
   background-color: #D5F1F0;
@@ -12,11 +25,12 @@ html {
 
 body {
   background-color: #494E50;
-  font: 100%;
 }
+
 
 .row {
   text-align: center;
+  overflow:hidden;
 }
 
 
@@ -39,7 +53,7 @@ body {
 a.main {
   font-weight: bold;
   color: #D5F1F0;
-  font-size: 20px;
+  font-size: 1em;
   text-decoration: none;
 }
 
@@ -53,7 +67,7 @@ a.link {
   color: white;
   display: inline;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1em;
   text-align: center;
   margin: 10px;
 }
@@ -67,7 +81,7 @@ a.link {
    &, li {
    display: inline;
    a {
-     font-size: 76px;
+     font-size: 5em;
      display: inline;
    }
   }
@@ -93,7 +107,7 @@ a p {
 }
 
 h2.work {
-  font-size: 13px;
+  font-size: 1em;
   padding-left: 0px;
 }
 
@@ -105,6 +119,12 @@ h2.work {
 
  .normal  {
    font-weight: normal;
+ }
+
+ p.web {
+   font-weight: bold;
+   color: #D5F1F0;
+   font-size: 1em;
  }
 
  footer p {
@@ -196,21 +216,43 @@ form#newProject {
 }
 
 /* contact */
-.contact {
-  text-align: center;
-  margin: 110px;
-}
 
-.contact li {
-  list-style-type: none;
+
+li {
   display: inline;
 }
 
-a.email {
-  font-size: 50px;
+h1.email {
+  font-size: 6em;
+  text-align: center;
 }
 
 /* about */
 .about {
   text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  h1.email {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  h1.email {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 499px) {
+  h1.email {
+    font-size: 1.75em;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+   body { font-size: 1em; }
+
 }

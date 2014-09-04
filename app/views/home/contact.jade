@@ -1,16 +1,18 @@
 extends ../shared/template
 
 block content
-  .contact
-    p.col-lg-12.col-md-12.col-sm-12.normal How can I help move your project along?
-    h1.col-lg-12.col-md-12.col-sm-12
-      a.email(href='mailto:ccampb13@gmail.com') ccampb13@gmail.com
-    p.col-lg-12.col-md-12.col-sm-12.normal Elsewhere:
-      .row
-        ul
-          a(href='https://twitter.com/_Chad_Campbell')
-            li.simple Twitter
-          a(href='https://www.linkedin.com/profile/view?id=34005455&trk=nav_responsive_tab_profile')
-            li.simple LinkedIn
-          a(href='https://github.com/ccampb13')
-            li.simple GitHub
+  .col-lg-12.col-md-12.col-sm-12
+    p.normal How can I help move your project along?
+  .col-lg-12.col-md-12.col-sm-12
+    h1.email
+      a(href='mailto:ccampb13@gmail.com') ccampb13@gmail.com
+  .col-lg-12.col-md-12.col-sm-12
+    p.normal Elsewhere:
+  .row
+    ul
+      a(href='https://twitter.com/_Chad_Campbell')
+        img.icon(src='/../img/twitter.png')
+      a(href='https://www.linkedin.com/profile/view?id=34005455&trk=nav_responsive_tab_profile')
+        img.linkedin(src='/../img/linkedin.png')
+      a(href='https://github.com/ccampb13')
+        img.icon(src='/../img/github.png')

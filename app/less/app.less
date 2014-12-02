@@ -43,8 +43,6 @@ body {
   height: 200px;
 }
 
-
-
 .primary{
   border: 3px solid red;
 }
@@ -72,6 +70,10 @@ a.link {
   margin: 10px;
 }
 
+footer p {
+  display: inline;
+}
+
 //////projects///////
 .project {
  display: inline;
@@ -80,9 +82,8 @@ a.link {
  ul.index-home-projects {
    &, li {
    display: inline;
-   a {
+   a.home-projects {
      font-size: 5em;
-     display: inline;
    }
   }
 }
@@ -125,11 +126,6 @@ h2.work {
    font-weight: bold;
    color: #D5F1F0;
    font-size: 1em;
- }
-
- footer p {
-   padding-top: 10px;
-   display: inline;
  }
 
  img.about {
@@ -232,8 +228,14 @@ h1.email {
   text-align: center;
 }
 
+///media queries//////////
+
 @media (min-width: 768px) and (max-width: 1000px) {
   h1.email {
+    font-size: 4em;
+  }
+
+  a.home-projects {
     font-size: 4em;
   }
 }
@@ -242,12 +244,20 @@ h1.email {
   h1.email {
     font-size: 3em;
   }
+
+  a.home-projects {
+    font-size: 3em;
+  }
 }
 
 @media (min-width: 200px) and (max-width: 499px) {
   h1.email {
     font-size: 1.75em;
     text-align: center;
+  }
+
+  a.home-projects {
+    font-size: 1.75em;
   }
 }
 

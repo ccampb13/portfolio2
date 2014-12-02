@@ -22,9 +22,7 @@ function load(app, fn){
 
   app.get('/', dbg, home.index);
   app.get('/about', dbg, home.about);
-  app.get('/faq', dbg, home.faq);
   app.get('/contact', dbg, home.contact);
-  app.get('/resume', dbg, home.resume);
 
   app.get('/login', dbg, users.login);
   app.post('/login', dbg, users.authenticate);

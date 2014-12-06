@@ -70,10 +70,6 @@ a.link {
   margin: 10px;
 }
 
-footer p {
-  display: inline;
-}
-
 //////projects///////
 .project {
  display: inline;
@@ -235,8 +231,10 @@ h1.email {
     font-size: 4em;
   }
 
-  a.home-projects {
-    font-size: 4em;
+  ul.index-home-projects {
+    li a.home-projects {
+      font-size: 4em;
+    }
   }
 }
 
@@ -245,8 +243,18 @@ h1.email {
     font-size: 3em;
   }
 
-  a.home-projects {
-    font-size: 3em;
+  footer {
+    span.simple {
+      display: block;
+      padding: 3px;
+    }
+  }
+
+  ul.index-home-projects {
+    li a.home-projects {
+      font-size: 3em;
+      display: block;
+    }
   }
 }
 
@@ -256,8 +264,20 @@ h1.email {
     text-align: center;
   }
 
-  a.home-projects {
-    font-size: 1.75em;
+  footer {
+    p, span {
+      display: block;
+      span {
+        padding: 3px;
+      }
+    }
+  }
+
+  ul.index-home-projects {
+    li a.home-projects {
+      font-size: 1.75em;
+      display: block;
+    }
   }
 }
 

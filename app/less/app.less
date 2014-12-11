@@ -54,9 +54,10 @@ body {
 a.main {
   font-weight: bold;
   color: #D5F1F0;
-  font-size: 1em;
+  font-size: 1.5em;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: darken(#D5F1F0, 10%);
   }
 }
 
@@ -69,18 +70,17 @@ a {
 p.simple.more-about {
   &:hover {
     color: #D5F1F0;
-    text-decoration: underline;
   }
 }
 
 a.link {
   color: white;
   display: inline;
-  font-size: 1em;
+  font-size: 1.25em;
   text-align: center;
   margin: 10px;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #D5F1F0;
   }
 }
@@ -89,10 +89,10 @@ a.link {
 ///template footer /////
 
 footer {
-  span.simple {
+  .simple {
     a {
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
         color: #D5F1F0;
       }
     }
@@ -154,7 +154,7 @@ h2.work {
  p.web {
    font-weight: bold;
    color: #D5F1F0;
-   font-size: 1em;
+   font-size: 1.25em;
  }
 
 
@@ -294,9 +294,13 @@ h1.email {
 }
 
 @media (min-width: 200px) and (max-width: 499px) {
-  // h1.normal {
-  //   display: block;
-  // }
+  h3.normal {
+    font-size: 20px;
+  }
+
+  .row.about {
+    margin-top: 30px;
+  }
 
   p.simple.more-about {
     font-size: 12px;

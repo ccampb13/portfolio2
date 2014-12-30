@@ -39,16 +39,29 @@ body {
 
 
 
-//////ignore for now////////
+/////projects///////
 .photo{
   display: inline-block;
   background-size: cover;
-  width: 200px;
+  width: 300px;
   height: 200px;
 }
 
 .primary{
   border: 3px solid red;
+}
+
+.project {
+  ul {
+    li{
+      a.simple {
+        &:hover {
+          text-decoration: none;
+          color: #D5F1F0;
+        }
+      }
+    }
+  }
 }
 ////////////////////////////////
 

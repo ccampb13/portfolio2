@@ -1,10 +1,9 @@
 extends ../shared/template
 
 block content
-  h1 Projects
 
   .project
-    h1: a(href='/projects/#{project._id}')= project.title
+    h1= project.title
     //- h2 #{project.photos.length} Photos
 
     if(user && project.isOwner(user))
@@ -26,11 +25,11 @@ block content
                 button Make Primary
 
     h2= project.description
-    h2= project.date
-    h2= project.tags
+    //- h2= project.date
+    //- h2= project.tags
     ul
-      li: a(href=project.git) Github
-      li: a(href=project.app) Amazon EC2
+      li: a.simple(href='#{project.git}', target='_blank') See Code
+      li: a.simple(href='#{project.app}', target='_blank') Visit Site
 
       if(user && project.isOwner(user))
         li

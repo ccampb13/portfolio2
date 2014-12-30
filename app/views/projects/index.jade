@@ -1,13 +1,16 @@
 extends ../shared/template
 
 block content
-  h1 Projects
 
   #projects
     each project in projects
       .project
         h1: a(href='/projects/#{project._id}')= project.title
         h2= project.description
+        #photos
+          each photo in project.photos
+            .photo(style='background-image:url("#{photo.file}")', class=photo.isPrimary ? 'primary' : '')
+
 
 block script
   script(src='/js/es6/compiled/projects.js')

@@ -15,6 +15,7 @@ class Project{
     var project = new Project();
     project._id = Mongo.ObjectID();
     project.title = fields.title[0].trim();
+    project.subtitle = fields.subtitle[0].trim();
     project.description = fields.description[0].trim();
     project.tags = fields.tags[0].split(',').map(t=>t.toLowerCase()).map(t=>t.trim());
     project.git = fields.git[0].trim();
@@ -29,6 +30,7 @@ class Project{
 
   update(obj, fn){
     this.title = obj.title.trim();
+    this.subtitle = obj.subtitle.trim();
     this.description = obj.description.trim();
     this.tags = obj.tags.split(',').map(t=>t.toLowerCase()).map(t=>t.trim());
     this.git = obj.git.trim();

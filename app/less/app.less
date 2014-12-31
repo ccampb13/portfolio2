@@ -41,10 +41,14 @@ body {
 
 /////projects///////
 .photo{
+  margin-top: 15px;
   display: inline-block;
   background-size: cover;
-  width: 300px;
+  min-width: 300px;
   height: 200px;
+  border-radius: 5px;
+  border: 2px solid darken(#D5F1F0, 10%)
+
 }
 
 .primary{
@@ -52,10 +56,16 @@ body {
 }
 
 .project {
+
+  small {
+    color: white;
+    font-size: 16px;
+  }
+
   ul {
     li{
       a.simple {
-        &:hover {
+        &:hover, &:active {
           text-decoration: none;
           color: #D5F1F0;
         }
@@ -92,7 +102,7 @@ a.link {
   display: inline;
   font-size: 1.25em;
   text-align: center;
-  margin: 10px;
+
   &:hover {
     text-decoration: none;
     color: #D5F1F0;
@@ -116,6 +126,9 @@ footer {
 //////projects///////
 .project {
  display: inline;
+  h1 {
+    margin-top: 0px;
+  }
 }
 
  ul.index-home-projects {
@@ -127,6 +140,10 @@ footer {
    a.home-projects {
      font-size: 5em;
      margin: 0px;
+     &:hover {
+       text-decoration: none;
+       color: #D5F1F0;
+    }
    }
   }
 }
@@ -136,12 +153,14 @@ p {
 }
 
 h1.normal {
+  margin-top: 0px;
   display: inline;
   padding: 0px;
   text-align: left;
 }
 
 h1.hi {
+  margin-top: 0px;
   padding-left: 0px;
 }
 
@@ -212,13 +231,15 @@ form#login {
   }
 }
 
-///////NEW PROJECT FORM///////////////////////
+///////NEW, EDIT PROJECT FORMS///////////////////////
 
-h1#newProject {
+h1#newProject,
+h1#editProject {
   text-align: center;
 }
 
-form#newProject {
+form#newProject,
+form#editProject {
 
   input   {
     display:block;
@@ -265,9 +286,18 @@ li {
 h1.email {
   font-size: 6em;
   text-align: center;
+  a:hover {
+    text-decoration: none;
+    color: #D5F1F0;
+  }
 }
 
 /* about */
+
+h3.normal {
+  margin-top: 0px;
+}
+
 .about {
   text-align: center;
 }
@@ -308,6 +338,14 @@ h1.email {
 }
 
 @media (min-width: 200px) and (max-width: 499px) {
+
+  .photo {
+    max-width: 100px;
+    padding: 0px;
+    margin-left: -30px;
+    border: none;
+  }
+
   h3.normal {
     font-size: 20px;
   }
@@ -337,7 +375,7 @@ h1.email {
 
   ul.index-home-projects {
     li a.home-projects {
-      font-size: 2em;
+      font-size: 3em;
       display: block;
     }
   }
@@ -352,6 +390,15 @@ h1.email {
     font-size: 16px;
     padding: 0px;
     margin: 0px;
+  }
+
+  //contact//
+  span.icon {
+
+    .icon {
+      height: 50px;
+      width: 50px;
+    }
   }
 }
 

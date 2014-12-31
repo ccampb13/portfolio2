@@ -1,14 +1,15 @@
 extends ../shared/template
 
 block content
-  h1 Edit Project
+  h1#editProject Edit Project
 
   form#editProject(action='/projects/#{project._id}', method='post')
     input(type='hidden', name='_method', value='put')
     input(type='text', name='title', placeholder='Title', value='#{project.title}')
+    input(type='text', name='subtitle', placeholder='Subtitle', value='#{project.subtitle}')
     textarea(name='description', placeholder='Description')= project.description
     input(type='text', name='tags', placeholder='Tags', value='#{project.tags.join(",")}')
     input(type='text', name='git', placeholder='Git Url', value='#{project.git}')
     input(type='text', name='app', placeholder='App Url', value='#{project.app}')
     input(type='date', name='date', value='#{moment(project.date).format("YYYY-MM-DD")}')
-    button Edit Project
+    button Update Project

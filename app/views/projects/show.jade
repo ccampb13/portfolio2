@@ -4,7 +4,7 @@ block content
 
   .project
     h1= project.title
-    //- h2 #{project.photos.length} Photos
+    small= project.subtitle
 
     if(user && project.isOwner(user))
       a(href='/projects/#{project._id}/edit') Edit
@@ -14,7 +14,7 @@ block content
 
     #photos
       each photo in project.photos
-        .photo(style='background-image:url("#{photo.file}")', class=photo.isPrimary ? 'primary' : '')
+        a.photo(href='#{project.app}', target='_blank', style='background-image:url("#{photo.file}")', class=photo.isPrimary ? 'primary' : '')
           if(user && project.isOwner(user))
             form(action='/projects/#{project._id}/photos/#{photo.name}', method='post')
               input(type='hidden', name='_method', value='delete')
@@ -23,13 +23,12 @@ block content
               form(action='/projects/#{project._id}/photos/#{photo.name}', method='post')
                 input(type='hidden', name='_method', value='put')
                 button Make Primary
-
-    h2= project.description
+    
+    p= project.description
     //- h2= project.date
     //- h2= project.tags
     ul
-      li: a.simple(href='#{project.git}', target='_blank') See Code
-      li: a.simple(href='#{project.app}', target='_blank') Visit Site
+      li: a.simple(href='#{project.git}', target='_blank') See code >
 
       if(user && project.isOwner(user))
         li

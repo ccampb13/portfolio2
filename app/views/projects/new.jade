@@ -5,6 +5,7 @@ block content
 
   form#newProject(action='/projects', method='post', enctype='multipart/form-data')
     input(type='text', name='title', placeholder='Title')
+    input(type='text', name='subtitle', placeholder='Subtitle')
     textarea(name='description', placeholder='Description')
     input(type='text', name='tags', placeholder='Tags')
     input(type='text', name='git', placeholder='Git Url')
